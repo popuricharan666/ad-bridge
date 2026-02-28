@@ -1,0 +1,28 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+logging:
+  level: INFO
+
+adPlatformClients:
+  meta:
+    appId: "YOUR_META_APP_ID"
+    appSecret: "YOUR_META_APP_SECRET"
+    accessToken: "YOUR_META_ACCESS_TOKEN"
+    adAccountId: "act_1234567890"
+  google:
+    developerToken: "YOUR_GOOGLE_DEVELOPER_TOKEN"
+    clientId: "YOUR_GOOGLE_OAUTH_CLIENT_ID"
+    clientSecret: "YOUR_GOOGLE_OAUTH_CLIENT_SECRET"
+    refreshToken: "YOUR_GOOGLE_REFRESH_TOKEN"
+    loginCustomerId: "0000000000"
+    customerId: "1111111111"
+  x:
+    clientId: "YOUR_X_CLIENT_ID"
+    clientSecret: "YOUR_X_CLIENT_SECRET"
+    accessToken: "YOUR_X_ACCESS_TOKEN"
+    accessTokenSecret: "YOUR_X_ACCESS_TOKEN_SECRET"

@@ -1,0 +1,16 @@
+.DS_Store
+.idea/
+.m2-repo/
+.mvn/wrapper/
+.oca/
+target/
+**/target/
+*.iml
+*.log
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar

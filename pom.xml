@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.adbridge</groupId>
+    <artifactId>ad-bridge</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>ad-bridge</name>
+
+    <modules>
+        <module>ad-bridge-commons</module>
+        <module>ad-bridge-dal</module>
+        <module>ad-bridge-api</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <dropwizard.version>3.0.12</dropwizard.version>
+        <guice.version>5.1.0</guice.version>
+        <lombok.version>1.18.36</lombok.version>
+        <junit.version>5.11.4</junit.version>
+
+        <!-- Ad network integration deps -->
+        <facebook.business.sdk.version>24.0.1</facebook.business.sdk.version>
+        <google.ads.version>41.1.0</google.ads.version>
+        <okhttp.version>4.12.0</okhttp.version>
+        <scribejava.version>8.3.3</scribejava.version>
+        <resilience4j.version>2.2.0</resilience4j.version>
+        <jackson.version>2.17.2</jackson.version>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.2.5</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
